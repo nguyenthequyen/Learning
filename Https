@@ -1,7 +1,0 @@
-Do môi trường thật internet là Https mà trong code là redirect sang http nên khi đưa lên môi trường dẫn đến redirect một vòng lặp sửa lại code
-thêm 
-#if !DEBUG
-  app.Use(async (context, next))=>{
-    context.Request.Scheme = "https";
-    await next()
-  });
